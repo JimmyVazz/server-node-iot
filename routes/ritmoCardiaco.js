@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/User");
+const RitmoCardiaco = require("../models/RitmoCardiaco");
 
 /* GET home page */
 router.get("/", (req, res, next) => {
@@ -8,8 +8,8 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/create", (req, res) => {
-  console.User.create(req.body)
-    .then((user) => {
+  RitmoCardiaco.create(req.body)
+    .then((RitmoCardiaco) => {
       res.json({ message: "success", data: req.body });
     })
     .catch((e) => res.render("error"));

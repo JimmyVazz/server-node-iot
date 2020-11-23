@@ -55,5 +55,7 @@ const index = require("./routes/index");
 app.use("/", index);
 const users = require("./routes/users");
 app.use("/users", users);
+const ritmosCardiacos = require("./routes/ritmoCardiaco");
+app.use("/ritmoCardiaco", ritmosCardiacos);
 
 module.exports = app;
