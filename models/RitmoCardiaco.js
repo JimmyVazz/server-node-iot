@@ -1,9 +1,10 @@
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ritmoCardiacoSchema = new Schema(
   {
     nombre: String,
-    data: JSON.stringify(Object),
+    data: Object,
   },
   {
     timestamps: true,
